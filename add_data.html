@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product CSV Form</title>
+    <style>
+        /* Basic styles for the body */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Styling the form */
+        form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+
+        /* Styling form inputs */
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #333;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Styling the button */
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Add subtle hover effect for inputs */
+        input:focus {
+            border-color: #80bdff;
+            outline: none;
+            box-shadow: 0 0 8px rgba(128, 189, 255, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <form id="dataForm">
+        <label for="productID">Product ID:</label>
+        <input type="text" id="productID" name="productID"><br>
+
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName"><br>
+
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock"><br>
+
+        <button type="button" onclick="addToCSV()">Add</button>
+    </form>
+
+    <script>
+        // Initialize CSV content with headers
+        let csvContent = "data:text/csv;charset=utf-8,Product ID,Product Name,Stock\n";
+
+        function addToCSV() {
+            // Get form values
+            const productID = document.getElementById("productID").value;
+            const productName = document.getElementById("productName").value;
+            const stock = document.getElementById("stock").value;
+
+            // Add new row to CSV content
+            csvContent += `${productID},${productName},${stock}\n`;
+
+            // Create a download link
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "products.csv");
+            document.body.appendChild(link);
+
+            // Download the CSV file
+            link.click();
+        }
+    </script>
+</body>
+</html>

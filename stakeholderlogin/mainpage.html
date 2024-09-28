@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login - Inventory Manager Login </title>
+    <link rel="stylesheet" href="style.css">
+    <script src= "script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome </h1>
+    </header>
+<div class = "actualbody">
+    <div class = "click-logo">
+        <div class = "logo-text">
+            <img src = "walmart.png"  alt = "Image not found" />
+        </div>
+
+        <div class="parent-container">
+            <div class="container" id="inventoryManager" onclick="toInventoryManager();">
+                <p>Inventory Manager Login </p>
+            </div>
+            <div class="container" id="salesManager" onclick="toSalesLogin()">
+                <p>Sales Manager Login</p>
+            </div>
+                <div class="container" id="supervisor" onclick="redirectTo('page3.html')">
+                    <p>Superviser Login</p>
+                </div>
+            </div>
+        </div>
+</div>
+    <script src="login.js"></script>
+   
+</body>
+</html>

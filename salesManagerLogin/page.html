@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Manager Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src= "script.js"></script>
+</head>
+
+<body>
+    <div class = "container">
+    <header>
+        <h1>Sales Manager Login</h1>
+    </header>
+    </div>
+
+<div class = "login-logo">
+    <section class = "logo-text">
+        <img src = "http://127.0.0.1:5500/stakeholderlogin/walmart.png"  alt = "Image not found" />
+    </section>
+
+    <section class="login-form">
+        <form id="loginForm" onsubmit="event.preventDefault(); validateCredentials();">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+        
+        <div id="login-message"></div>
+    </section>
+
+  
+</div>
+    <script src="login.js"></script>
+   
+</body>
+</html>

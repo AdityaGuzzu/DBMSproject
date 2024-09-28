@@ -1,0 +1,71 @@
+.login-form {
+    margin: 50px auto;
+    padding: 20px;
+    width: 300px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+#login-message {
+    margin-top: 15px;
+    color: red;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    height: 100px; /* Vertically centers the content */
+}
+
+.login-logo {
+    display: flex;
+    justify-content: space-between; /* Adjusts space between the sections */
+}
+
+.login-logo section {
+    width: 45%; /* Sets the width of each section */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional, to visualize the sections */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.login-logo .logo-text{
+    display: flex;
+    font-size: 100px;
+    text-align: center;
+    border: none;
+    align-items: center;
+    border-radius: 0px;
+    justify-content: center;
+}
+

@@ -1,0 +1,70 @@
+/* Ensure body takes up full viewport and centers everything */
+.actualbody {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Container for both logo and login boxes horizontally */
+.click-logo {
+    display: flex;
+    flex-direction: row; /* Arrange logo and login boxes horizontally */
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between the logo and the login boxes */
+    height: 200px;
+}
+
+/* Center the logo */
+.click-logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Container for the login boxes */
+.parent-container {
+    display: flex;
+    flex-direction: column; /* Stack login boxes vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between the boxes */
+    
+}
+
+/* Individual login box styling */
+#inventoryManager, #salesManager, #supervisor {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #cceeff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px; /* Adjust the width of each box */
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+#inventoryManager:hover, #salesManager:hover, #supervisor:hover {
+    transform: scale(1.05);
+}
+
+/* Styling for the header */
+
+.parent-container .container{
+    background-color: aqua;
+    width: 100%;
+}
+
+header{
+    text-align: center;
+    font-size: 50px;
+    background-color: aqua;
+}
